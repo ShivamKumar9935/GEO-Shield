@@ -1,0 +1,58 @@
+{
+  "name": "Open-Meteo next-24-hour precipitation forecast",
+  "source": "Open-Meteo Forecast API (automatic best-match forecast model)",
+  "source_model": "Best match; provider/model is selected by Open-Meteo and is not reported in this response.",
+  "source_url": "https://api.open-meteo.com/v1/forecast?latitude=12.829525&longitude=80.03629&hourly=precipitation&forecast_hours=48&timezone=UTC",
+  "documentation_url": "https://open-meteo.com/en/docs",
+  "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "attribution": "Weather forecast data by Open-Meteo.com",
+  "type": "forecast",
+  "is_real": true,
+  "status": "REAL_SOURCE_DATA",
+  "value_mm": 4.3,
+  "unit": "mm",
+  "accumulation_period": "Next 24 hours, 2026-09-29T12:00Z to 2026-09-30T12:00Z (UTC)",
+  "valid_start": "2026-09-29T12:00:00Z",
+  "valid_end": "2026-09-30T12:00:00Z",
+  "retrieved_at": "2026-09-29T11:30:30Z",
+  "spatial_resolution": "Forecast model grid selected by the API; provider resolution varies and is not returned.",
+  "requested_coordinates": [
+    12.8235,
+    80.044
+  ],
+  "source_grid_coordinates": [
+    12.829525,
+    80.03629
+  ],
+  "geographic_extent": {
+    "latitude": 12.829525,
+    "longitude": 80.03629
+  },
+  "method": "Sum of the 24 hourly precipitation totals (mm) following the forecast-window start; API hourly precipitation is each preceding-hour sum.",
+  "hourly_values_mm": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    2.4,
+    1.1,
+    0.5,
+    0.1,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.1,
+    0.1,
+    0.0
+  ]
+}

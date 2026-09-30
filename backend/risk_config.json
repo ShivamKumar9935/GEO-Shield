@@ -1,0 +1,23 @@
+{
+  "weights": {
+    "elevation": 0.30,
+    "rainfall": 0.25,
+    "drainage": 0.20,
+    "landcover": 0.15,
+    "water_proximity": 0.10
+  },
+  "classification": {
+    "low": 25,
+    "moderate": 50,
+    "high": 75
+  },
+  "rainfall": {
+    "unit": "mm",
+    "period_hours": 24,
+    "min_mm": 40,
+    "max_mm": 180,
+    "min_risk": 18,
+    "max_risk": 98,
+    "normalization": "Linear between configured reference values, then clamped to 0–100; rainfall below 40 mm can map below 18 before clamping."
+  }
+}

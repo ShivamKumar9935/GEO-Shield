@@ -1,0 +1,26 @@
+{
+  "active_location_id": "potheri_srm",
+  "locations": {
+    "potheri_srm": {
+      "id": "potheri_srm",
+      "name": "Potheri / SRM KTR",
+      "country": "India",
+      "state": "Tamil Nadu",
+      "latitude": 12.8235,
+      "longitude": 80.044,
+      "crs": "EPSG:4326",
+      "bbox": {
+        "north": 12.837,
+        "south": 12.809,
+        "east": 80.0525,
+        "west": 80.031
+      },
+      "bbox_description": "Pilot extent derived from the bounding extent of the retained Phase 1 demo risk-zone polygons; this is a rectangular study extent, not an official administrative boundary.",
+      "grid_cell_size_m": 180,
+      "risk_grid_file": "real/potheri_srm/risk_grid.geojson",
+      "fallback_risk_zones_file": "mock/risk_zones.geojson",
+      "elevation_file": "real/potheri_srm/elevation_clip_30m.tif",
+      "osm_layers_file": "real/potheri_srm/osm_layers.geojson"
+    }
+  }
+}

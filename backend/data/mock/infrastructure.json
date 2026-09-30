@@ -1,0 +1,143 @@
+{
+  "hospitals": [
+    {
+      "id": "HOSP-01",
+      "name": "SRM Global Hospital & Research Institute",
+      "type": "Tertiary Care Hospital",
+      "beds": 1200,
+      "icu_beds": 150,
+      "elevation_m": 46.0,
+      "coordinates": [12.8192, 80.0398],
+      "zone_id": "ZONE-B",
+      "status": "Operational / Safe Triage Center"
+    },
+    {
+      "id": "HOSP-02",
+      "name": "Potheri Urban Primary Health Centre",
+      "type": "Primary Health Centre",
+      "beds": 35,
+      "icu_beds": 4,
+      "elevation_m": 33.0,
+      "coordinates": [12.8275, 80.0405],
+      "zone_id": "ZONE-C",
+      "status": "Demo facility record; scenario susceptibility is evaluated separately"
+    },
+    {
+      "id": "HOSP-03",
+      "name": "Maraimalai Nagar Community Clinic",
+      "type": "Secondary Clinic",
+      "beds": 60,
+      "icu_beds": 10,
+      "elevation_m": 53.5,
+      "coordinates": [12.8125, 80.0355],
+      "zone_id": "ZONE-G",
+      "status": "Elevated Staging Center"
+    }
+  ],
+  "shelters": [
+    {
+      "id": "SHELTER-01",
+      "name": "SRM Indoor Sports Complex & Multi-purpose Hall",
+      "capacity": 1500,
+      "current_occupancy": 0,
+      "elevation_m": 45.0,
+      "coordinates": [12.8220, 80.0435],
+      "zone_id": "ZONE-A",
+      "supplies_ready": true,
+      "safety_rating": "HIGH"
+    },
+    {
+      "id": "SHELTER-02",
+      "name": "SRM Medical Auditorium & Annex",
+      "capacity": 900,
+      "current_occupancy": 0,
+      "elevation_m": 47.0,
+      "coordinates": [12.8180, 80.0410],
+      "zone_id": "ZONE-B",
+      "supplies_ready": true,
+      "safety_rating": "MAXIMUM"
+    },
+    {
+      "id": "SHELTER-03",
+      "name": "Kattankulathur High School Hall",
+      "capacity": 650,
+      "current_occupancy": 0,
+      "elevation_m": 35.0,
+      "coordinates": [12.8335, 80.0440],
+      "zone_id": "ZONE-F",
+      "supplies_ready": false,
+      "safety_rating": "MODERATE"
+    },
+    {
+      "id": "SHELTER-04",
+      "name": "Maraimalai Nagar Cyclone Relief Centre",
+      "capacity": 1200,
+      "current_occupancy": 0,
+      "elevation_m": 55.0,
+      "coordinates": [12.8115, 80.0340],
+      "zone_id": "ZONE-G",
+      "supplies_ready": true,
+      "safety_rating": "MAXIMUM"
+    }
+  ],
+  "schools": [
+    { "id": "SCH-01", "name": "SRM Public School", "coordinates": [12.8255, 80.0445], "zone_id": "ZONE-A" },
+    { "id": "SCH-02", "name": "Potheri Panchayat Union Middle School", "coordinates": [12.8285, 80.0390], "zone_id": "ZONE-C" },
+    { "id": "SCH-03", "name": "St. Joseph's Matriculation School", "coordinates": [12.8140, 80.0360], "zone_id": "ZONE-G" }
+  ],
+  "water_bodies": [
+    {
+      "name": "Potheri Lake (Potheri Eri)",
+      "type": "Retention Lake",
+      "coordinates": [
+        [12.8290, 80.0350],
+        [12.8320, 80.0380],
+        [12.8280, 80.0400],
+        [12.8260, 80.0370]
+      ]
+    },
+    {
+      "name": "Kattankulathur Periya Eri",
+      "type": "Water Reservoir",
+      "coordinates": [
+        [12.8350, 80.0390],
+        [12.8390, 80.0430],
+        [12.8360, 80.0460],
+        [12.8320, 80.0420]
+      ]
+    }
+  ],
+  "critical_roads": [
+    {
+      "name": "GST Road (NH-45 Corridor)",
+      "type": "National Highway",
+      "elevation_status": "Vulnerable at Potheri flyover subway",
+      "coordinates": [
+        [12.8100, 80.0420],
+        [12.8200, 80.0460],
+        [12.8250, 80.0480],
+        [12.8350, 80.0510]
+      ]
+    },
+    {
+      "name": "SRM Campus Central Boulevard",
+      "type": "Main Access Way",
+      "elevation_status": "Elevated campus ridge",
+      "coordinates": [
+        [12.8180, 80.0400],
+        [12.8210, 80.0430],
+        [12.8240, 80.0460]
+      ]
+    },
+    {
+      "name": "Potheri Station Road",
+      "type": "Collector Road",
+      "elevation_status": "Prone to inundation >90mm rainfall",
+      "coordinates": [
+        [12.8250, 80.0480],
+        [12.8275, 80.0420],
+        [12.8290, 80.0370]
+      ]
+    }
+  ]
+}

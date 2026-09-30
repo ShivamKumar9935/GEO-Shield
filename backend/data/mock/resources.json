@@ -1,0 +1,21 @@
+{
+  "ambulances": [
+    { "id": "AMB-01", "callsign": "Med-Shield 1", "base": "SRM Global Hospital", "status": "Ready", "coords": [12.8190, 80.0395] },
+    { "id": "AMB-02", "callsign": "Med-Shield 2", "base": "SRM Global Hospital", "status": "Ready", "coords": [12.8192, 80.0397] },
+    { "id": "AMB-03", "callsign": "108-Emergency-KTR", "base": "Maraimalai Staging", "status": "Ready", "coords": [12.8120, 80.0350] },
+    { "id": "AMB-04", "callsign": "Campus Rapid-1", "base": "Tech Park Gate", "status": "Ready", "coords": [12.8235, 80.0450] },
+    { "id": "AMB-05", "callsign": "108-Emergency-Potheri", "base": "GST Corridor", "status": "Ready", "coords": [12.8250, 80.0480] },
+    { "id": "AMB-06", "callsign": "Med-Shield 3", "base": "SRM Global Hospital", "status": "Ready", "coords": [12.8188, 80.0392] },
+    { "id": "AMB-07", "callsign": "Disaster Relief Amb-A", "base": "Maraimalai Staging", "status": "Ready", "coords": [12.8125, 80.0355] },
+    { "id": "AMB-08", "callsign": "Disaster Relief Amb-B", "base": "Maraimalai Staging", "status": "Ready", "coords": [12.8122, 80.0348] }
+  ],
+  "boats": [
+    { "id": "BOAT-01", "name": "NDRF Inflatable Zodiac 1", "type": "Rigid Inflatable", "capacity": 8, "base": "Maraimalai Staging", "status": "Ready", "coords": [12.8120, 80.0350] },
+    { "id": "BOAT-02", "name": "NDRF Inflatable Zodiac 2", "type": "Rigid Inflatable", "capacity": 8, "base": "Maraimalai Staging", "status": "Ready", "coords": [12.8122, 80.0352] },
+    { "id": "BOAT-03", "name": "SDRF Rescue Dinghy 1", "type": "Dinghy", "capacity": 6, "base": "Potheri Eri Station", "status": "Ready", "coords": [12.8270, 80.0375] },
+    { "id": "BOAT-04", "name": "SDRF Rescue Dinghy 2", "type": "Dinghy", "capacity": 6, "base": "Potheri Eri Station", "status": "Ready", "coords": [12.8272, 80.0377] },
+    { "id": "BOAT-05", "name": "Fire & Rescue Heavy Raft", "type": "Rescue Raft", "capacity": 12, "base": "Maraimalai Staging", "status": "Ready", "coords": [12.8118, 80.0345] }
+  ],
+  "relief_kits_stock": 7500,
+  "shelter_total_capacity": 4250
+}

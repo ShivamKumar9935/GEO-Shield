@@ -1,0 +1,3 @@
+# Optional one-time raster ingestion tools. The API serves the processed local GeoJSON/GeoTIFF.
+rasterio>=1.4,<2
+numpy>=1.26

@@ -1,0 +1,253 @@
+// Local fallback mock data mirroring backend schemas for offline resilience
+
+export const DEFAULT_STUDY_AREA = {
+  name: "Potheri / SRM KTR",
+  subregion: "Chengalpattu District, Tamil Nadu, India",
+  center: [12.8235, 80.0440],
+  zoom: 14.5
+};
+
+export const INITIAL_ZONES = [
+  {
+    id: "ZONE-A",
+    name: "Zone A: SRM Main Academic Campus",
+    description: "Tech Park, Engineering blocks, and Central Library area",
+    base_elevation_m: 42.5,
+    elevation_factor: 45,
+    drainage_factor: 55,
+    landcover_factor: 75,
+    water_proximity_factor: 30,
+    population: 8500,
+    infrastructure: ["SRM Tech Park", "Central Library", "Substation A", "Bio-Tech Lab"],
+    accessibility_factor: 0.85,
+    center: [12.8235, 80.0450],
+    coordinates: [
+      [12.8255, 80.0425],
+      [12.8260, 80.0475],
+      [12.8215, 80.0480],
+      [12.8210, 80.0430]
+    ]
+  },
+  {
+    id: "ZONE-B",
+    name: "Zone B: SRM Medical College & Hospital",
+    description: "Hospital trauma center, medical college, designated primary triage",
+    base_elevation_m: 46.0,
+    elevation_factor: 30,
+    drainage_factor: 35,
+    landcover_factor: 60,
+    water_proximity_factor: 25,
+    population: 3200,
+    infrastructure: ["SRM Global Hospital", "Trauma Unit", "Medical Oxygen Plant"],
+    accessibility_factor: 0.95,
+    center: [12.8190, 80.0395],
+    coordinates: [
+      [12.8210, 80.0370],
+      [12.8215, 80.0420],
+      [12.8165, 80.0415],
+      [12.8160, 80.0365]
+    ]
+  },
+  {
+    id: "ZONE-C",
+    name: "Zone C: Potheri Lowlands & Eri Outskirts",
+    description: "Depression basin near Potheri Lake, high residential density",
+    base_elevation_m: 31.0,
+    elevation_factor: 88,
+    drainage_factor: 82,
+    landcover_factor: 70,
+    water_proximity_factor: 92,
+    population: 6420,
+    infrastructure: ["Potheri Power Feeder", "Potheri Town Hall", "Low-lying Community Housing"],
+    accessibility_factor: 0.50,
+    center: [12.8280, 80.0380],
+    coordinates: [
+      [12.8310, 80.0350],
+      [12.8315, 80.0410],
+      [12.8250, 80.0405],
+      [12.8245, 80.0345]
+    ]
+  },
+  {
+    id: "ZONE-D",
+    name: "Zone D: GST Road Arterial & Railway Corridor",
+    description: "National Highway 45 intersection and railway underpass chokepoint",
+    base_elevation_m: 36.0,
+    elevation_factor: 72,
+    drainage_factor: 78,
+    landcover_factor: 85,
+    water_proximity_factor: 45,
+    population: 4800,
+    infrastructure: ["Potheri Railway Station", "NH-45 Flyover Culvert", "Transit Hub"],
+    accessibility_factor: 0.65,
+    center: [12.8250, 80.0480],
+    coordinates: [
+      [12.8280, 80.0475],
+      [12.8275, 80.0525],
+      [12.8220, 80.0515],
+      [12.8225, 80.0465]
+    ]
+  },
+  {
+    id: "ZONE-E",
+    name: "Zone E: SRM Student Residential Cluster",
+    description: "Multi-storey hostel complexes and central dining halls",
+    base_elevation_m: 44.0,
+    elevation_factor: 40,
+    drainage_factor: 48,
+    landcover_factor: 65,
+    water_proximity_factor: 35,
+    population: 7100,
+    infrastructure: ["Sanctuary Hostels", "Central Dining Hall", "Student Health Dispensary"],
+    accessibility_factor: 0.80,
+    center: [12.8205, 80.0490],
+    coordinates: [
+      [12.8225, 80.0465],
+      [12.8220, 80.0520],
+      [12.8170, 80.0510],
+      [12.8175, 80.0455]
+    ]
+  },
+  {
+    id: "ZONE-F",
+    name: "Zone F: Kattankulathur Basin & Lake Fringe",
+    description: "Peri-urban settlement, agricultural runoff and natural drainage flow",
+    base_elevation_m: 33.5,
+    elevation_factor: 84,
+    drainage_factor: 75,
+    landcover_factor: 55,
+    water_proximity_factor: 88,
+    population: 5100,
+    infrastructure: ["Kattankulathur Primary School", "Panchayat Office", "Rural Water Pumping Station"],
+    accessibility_factor: 0.55,
+    center: [12.8340, 80.0410],
+    coordinates: [
+      [12.8370, 80.0380],
+      [12.8365, 80.0450],
+      [12.8305, 80.0440],
+      [12.8310, 80.0370]
+    ]
+  },
+  {
+    id: "ZONE-G",
+    name: "Zone G: Maraimalai Nagar Highland & Staging Buffer",
+    description: "Elevated industrial plateau, safe staging ground for heavy machinery",
+    base_elevation_m: 54.0,
+    elevation_factor: 18,
+    drainage_factor: 25,
+    landcover_factor: 50,
+    water_proximity_factor: 15,
+    population: 2900,
+    infrastructure: ["Logistics Warehouse Alpha", "Maraimalai Substation", "Emergency Relief Depot"],
+    accessibility_factor: 0.90,
+    center: [12.8120, 80.0350],
+    coordinates: [
+      [12.8150, 80.0320],
+      [12.8145, 80.0380],
+      [12.8090, 80.0370],
+      [12.8095, 80.0310]
+    ]
+  }
+];
+
+export const MOCK_INFRASTRUCTURE = {
+  hospitals: [
+    { id: "HOSP-01", name: "SRM Global Hospital", coords: [12.8192, 80.0398], type: "Tertiary Trauma Center", beds: 1200 },
+    { id: "HOSP-02", name: "Potheri Primary Health Center", coords: [12.8275, 80.0405], type: "PHC / Lowland Clinic", beds: 35 },
+    { id: "HOSP-03", name: "Maraimalai Community Clinic", coords: [12.8125, 80.0355], type: "Highland Clinic", beds: 60 }
+  ],
+  shelters: [
+    { id: "SHELTER-01", name: "SRM Indoor Sports Stadium", coords: [12.8220, 80.0435], capacity: 1500, rating: "HIGH" },
+    { id: "SHELTER-02", name: "SRM Medical Auditorium", coords: [12.8180, 80.0410], capacity: 900, rating: "MAXIMUM" },
+    { id: "SHELTER-03", name: "Kattankulathur High School", coords: [12.8335, 80.0440], capacity: 650, rating: "MODERATE" },
+    { id: "SHELTER-04", name: "Maraimalai Cyclone Shelter", coords: [12.8115, 80.0340], capacity: 1200, rating: "MAXIMUM" }
+  ],
+  water_bodies: [
+    {
+      name: "Potheri Lake (Potheri Eri)",
+      type: "Retention Lake Basin",
+      path: [
+        [12.8290, 80.0350],
+        [12.8320, 80.0380],
+        [12.8280, 80.0400],
+        [12.8260, 80.0370]
+      ]
+    },
+    {
+      name: "Kattankulathur Periya Eri",
+      type: "Reservoir",
+      path: [
+        [12.8350, 80.0390],
+        [12.8390, 80.0430],
+        [12.8360, 80.0460],
+        [12.8320, 80.0420]
+      ]
+    }
+  ],
+  roads: [
+    {
+      name: "GST Road (NH-45)",
+      status: "Arterial Expressway",
+      path: [
+        [12.8100, 80.0420],
+        [12.8200, 80.0460],
+        [12.8250, 80.0480],
+        [12.8350, 80.0510]
+      ]
+    },
+    {
+      name: "SRM Campus Boulevard",
+      status: "Elevated Campus Spine",
+      path: [
+        [12.8180, 80.0400],
+        [12.8210, 80.0430],
+        [12.8240, 80.0460]
+      ]
+    },
+    {
+      name: "Potheri Station Road",
+      status: "Lowland link · modeled susceptibility context",
+      path: [
+        [12.8250, 80.0480],
+        [12.8275, 80.0420],
+        [12.8290, 80.0370]
+      ]
+    }
+  ]
+};
+
+export const MOCK_ROUTES = {
+  shortest: {
+    name: "Shortest Direct Modeled Route",
+    distance_km: 2.4,
+    est_time: "8.5 min",
+    risk_level: "CRITICAL",
+    risk_score: 85,
+    color: "#94a3b8", // Gray
+    description: "Stored demo fallback route with an illustrative risk label; it does not represent an observed flood or road condition.",
+    path: [
+      [12.8280, 80.0380],
+      [12.8270, 80.0375],
+      [12.8245, 80.0385],
+      [12.8215, 80.0395],
+      [12.8180, 80.0410]
+    ]
+  },
+  risk_aware: {
+    name: "Risk-Aware Evacuation Route (Recommended)",
+    distance_km: 3.1,
+    est_time: "11.2 min",
+    risk_level: "LOW",
+    risk_score: 24,
+    color: "#38bdf8", // Blue
+    description: "Modeled example route follows the demonstration GST Road corridor and campus boulevard geometry.",
+    path: [
+      [12.8280, 80.0380],
+      [12.8275, 80.0430],
+      [12.8260, 80.0475],
+      [12.8220, 80.0460],
+      [12.8200, 80.0435],
+      [12.8180, 80.0410]
+    ]
+  }
+};

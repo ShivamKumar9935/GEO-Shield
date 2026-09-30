@@ -1,0 +1,265 @@
+{
+  "datasets": {
+    "elevation": {
+      "name": "Copernicus DEM GLO-30 public tile, cropped to Potheri pilot extent",
+      "source": "Copernicus WorldDEM-30 / Copernicus DEM GLO-30 Public",
+      "url_or_reference": "https://registry.opendata.aws/copernicus-dem/; tile https://copernicus-dem-30m.s3.eu-central-1.amazonaws.com/Copernicus_DSM_COG_10_N12_00_E080_00_DEM/Copernicus_DSM_COG_10_N12_00_E080_00_DEM.tif",
+      "license": "Copernicus DEM free-use licence; attribution required for adapted data",
+      "attribution": "produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.",
+      "retrieved_at": "2026-09-28T20:36:29Z",
+      "spatial_resolution": "30 m (1 arc-second source raster; grid values sampled at 180 m cell centroids)",
+      "geographic_extent": {
+        "north": 12.837,
+        "south": 12.809,
+        "east": 80.0525,
+        "west": 80.031
+      },
+      "is_real": true,
+      "status": "REAL_SOURCE_DATA",
+      "description": "Copernicus GLO-30 DSM clipped to the configured pilot bbox. 180 m cells use centroid elevation, with inverse linear normalization between area P02 (34.7418 m) and P98 (53.3454 m). Lower elevation maps to higher modeled susceptibility; this is not a validated hydrological flood model.",
+      "processing": {
+        "source_crs": "EPSG:4326",
+        "valid_crop_pixels": 7777,
+        "crop_min_elevation_m": 7.0702,
+        "crop_max_elevation_m": 67.0037,
+        "normalization_p02_m": 34.7418,
+        "normalization_p98_m": 53.3454,
+        "formula": "clamp((p98_m - elevation_m) / (p98_m - p02_m) * 100, 0, 100)",
+        "cell_count": 79,
+        "cell_size_m": 180
+      }
+    },
+    "water_bodies": {
+      "name": "OpenStreetMap water features for Potheri pilot extent",
+      "source": "OpenStreetMap contributors via Overpass API",
+      "url_or_reference": "https://overpass-api.de/api/interpreter; https://www.openstreetmap.org/copyright",
+      "license": "Open Database License (ODbL)",
+      "retrieved_at": "2026-09-29T10:51:27Z",
+      "spatial_resolution": "Vector features; not applicable",
+      "geographic_extent": {
+        "south": 12.816,
+        "west": 80.036,
+        "north": 12.831,
+        "east": 80.047,
+        "layer_query_extent": {
+          "south": 12.816,
+          "west": 80.036,
+          "north": 12.831,
+          "east": 80.047
+        }
+      },
+      "is_real": true,
+      "status": "PARTIAL_REAL_SOURCE",
+      "description": "Retrieved 5 OSM water body features (snapshot 2026-09-29T10:40:02Z). Coverage is partial for the configured study area; queried extent: {'south': 12.816, 'west': 80.036, 'north': 12.831, 'east': 80.047}. Unmapped categories/areas retain clearly identified Phase 1 demo fallback data; this is not a complete inventory or real-time feed.",
+      "processing": {
+        "feature_count": 5,
+        "feature_counts": {
+          "road": 181,
+          "water_body": 5,
+          "facility": 2,
+          "facility_types": {
+            "university": 2
+          }
+        },
+        "study_area_coverage": {
+          "south": 12.816,
+          "west": 80.036,
+          "north": 12.831,
+          "east": 80.047
+        },
+        "query_extent": {
+          "south": 12.816,
+          "west": 80.036,
+          "north": 12.831,
+          "east": 80.047
+        },
+        "osm_base": "2026-09-29T10:40:02Z",
+        "coverage_complete": false,
+        "snapshot_not_realtime": true,
+        "water_buffer_m": 0
+      },
+      "attribution": "Data © OpenStreetMap contributors, available under the ODbL."
+    },
+    "roads": {
+      "name": "OpenStreetMap road network for Potheri pilot extent",
+      "source": "OpenStreetMap contributors via Overpass API",
+      "url_or_reference": "https://overpass-api.de/api/interpreter; https://www.openstreetmap.org/copyright",
+      "license": "Open Database License (ODbL)",
+      "retrieved_at": "2026-09-29T10:51:27Z",
+      "spatial_resolution": "Vector centerlines; not applicable",
+      "geographic_extent": {
+        "south": 12.816,
+        "west": 80.036,
+        "north": 12.831,
+        "east": 80.047,
+        "layer_query_extent": {
+          "south": 12.816,
+          "west": 80.036,
+          "north": 12.831,
+          "east": 80.047
+        }
+      },
+      "is_real": true,
+      "status": "PARTIAL_REAL_SOURCE",
+      "description": "Retrieved 181 OSM road features (snapshot 2026-09-29T10:40:02Z). Coverage is partial for the configured study area; queried extent: {'south': 12.816, 'west': 80.036, 'north': 12.831, 'east': 80.047}. Unmapped categories/areas retain clearly identified Phase 1 demo fallback data; this is not a complete inventory or real-time feed.",
+      "processing": {
+        "feature_count": 181,
+        "feature_counts": {
+          "road": 181,
+          "water_body": 5,
+          "facility": 2,
+          "facility_types": {
+            "university": 2
+          }
+        },
+        "study_area_coverage": {
+          "south": 12.816,
+          "west": 80.036,
+          "north": 12.831,
+          "east": 80.047
+        },
+        "query_extent": {
+          "south": 12.816,
+          "west": 80.036,
+          "north": 12.831,
+          "east": 80.047
+        },
+        "osm_base": "2026-09-29T10:40:02Z",
+        "coverage_complete": false,
+        "snapshot_not_realtime": true,
+        "water_buffer_m": 0
+      },
+      "attribution": "Data © OpenStreetMap contributors, available under the ODbL."
+    },
+    "infrastructure": {
+      "name": "OpenStreetMap emergency and civic facilities for Potheri pilot extent",
+      "source": "OpenStreetMap contributors via Overpass API",
+      "url_or_reference": "https://overpass-api.de/api/interpreter; https://www.openstreetmap.org/copyright",
+      "license": "Open Database License (ODbL)",
+      "retrieved_at": "2026-09-29T10:51:27Z",
+      "spatial_resolution": "Vector points/polygons; not applicable",
+      "geographic_extent": {
+        "south": 12.816,
+        "west": 80.036,
+        "north": 12.831,
+        "east": 80.047,
+        "layer_query_extent": {
+          "south": 12.816,
+          "west": 80.036,
+          "north": 12.831,
+          "east": 80.047
+        }
+      },
+      "is_real": true,
+      "status": "MIXED_REAL_AND_DEMO",
+      "description": "Retrieved 2 OSM facility features (snapshot 2026-09-29T10:40:02Z). Coverage is partial for the configured study area; queried extent: {'south': 12.816, 'west': 80.036, 'north': 12.831, 'east': 80.047}. Unmapped categories/areas retain clearly identified Phase 1 demo fallback data; this is not a complete inventory or real-time feed.",
+      "processing": {
+        "feature_count": 2,
+        "feature_counts": {
+          "road": 181,
+          "water_body": 5,
+          "facility": 2,
+          "facility_types": {
+            "university": 2
+          }
+        },
+        "study_area_coverage": {
+          "south": 12.816,
+          "west": 80.036,
+          "north": 12.831,
+          "east": 80.047
+        },
+        "query_extent": {
+          "south": 12.816,
+          "west": 80.036,
+          "north": 12.831,
+          "east": 80.047
+        },
+        "osm_base": "2026-09-29T10:40:02Z",
+        "coverage_complete": false,
+        "snapshot_not_realtime": true,
+        "water_buffer_m": 0
+      },
+      "attribution": "Data © OpenStreetMap contributors, available under the ODbL."
+    },
+    "rainfall": {
+      "name": "Open-Meteo next-24-hour precipitation forecast",
+      "source": "Open-Meteo Forecast API (automatic best-match forecast model)",
+      "url_or_reference": "https://api.open-meteo.com/v1/forecast?latitude=12.829525&longitude=80.03629&hourly=precipitation&forecast_hours=48&timezone=UTC; https://open-meteo.com/en/docs",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "retrieved_at": "2026-09-29T11:30:30Z",
+      "spatial_resolution": "Forecast model grid selected by the API; provider resolution varies and is not returned.",
+      "geographic_extent": {
+        "latitude": 12.829525,
+        "longitude": 80.03629
+      },
+      "is_real": true,
+      "status": "REAL_SOURCE_DATA",
+      "description": "Model-based source forecast, not a rain-gauge observation. 4.3 mm accumulation for Next 24 hours, 2026-09-29T12:00Z to 2026-09-30T12:00Z (UTC). Forecast snapshot expires at 2026-09-30T12:00:00Z.",
+      "processing": {
+        "type": "forecast",
+        "accumulation_period": "Next 24 hours, 2026-09-29T12:00Z to 2026-09-30T12:00Z (UTC)",
+        "valid_start": "2026-09-29T12:00:00Z",
+        "valid_end": "2026-09-30T12:00:00Z",
+        "cache_file": "real\\potheri_srm\\rainfall_forecast.json",
+        "value_mm": 4.3,
+        "method": "Sum of the 24 hourly precipitation totals (mm) following the forecast-window start; API hourly precipitation is each preceding-hour sum."
+      },
+      "attribution": "Weather forecast data by Open-Meteo.com"
+    },
+    "population": {
+      "name": "Zone population and modeled exposure",
+      "source": "Retained Phase 1 demo risk-zone dataset",
+      "url_or_reference": "backend/data/mock/risk_zones.geojson",
+      "license": "Project demo data",
+      "retrieved_at": null,
+      "spatial_resolution": "Inherited zone totals distributed evenly across 180 m cells for the demo risk grid",
+      "geographic_extent": {
+        "north": 12.837,
+        "south": 12.809,
+        "east": 80.0525,
+        "west": 80.031
+      },
+      "is_real": false,
+      "status": "DEMO",
+      "description": "Zone totals are the existing manually assigned prototype values. The generated grid apportions each source-zone total evenly across that zone's cells; this is a display/modeling approximation, not a gridded population observation.",
+      "processing": null
+    },
+    "drainage": {
+      "name": "Drainage susceptibility factor",
+      "source": "Retained Phase 1 demo risk-zone dataset",
+      "url_or_reference": "backend/data/mock/risk_zones.geojson",
+      "license": "Project demo data",
+      "retrieved_at": null,
+      "spatial_resolution": "Inherited from parent demo zone",
+      "geographic_extent": {
+        "north": 12.837,
+        "south": 12.809,
+        "east": 80.0525,
+        "west": 80.031
+      },
+      "is_real": false,
+      "status": "DEMO",
+      "description": "No observed drainage network or calibrated hydrological data is integrated; the parent demo-zone factor is retained.",
+      "processing": null
+    },
+    "landcover": {
+      "name": "Land-cover susceptibility factor",
+      "source": "Retained Phase 1 demo risk-zone dataset",
+      "url_or_reference": "backend/data/mock/risk_zones.geojson",
+      "license": "Project demo data",
+      "retrieved_at": null,
+      "spatial_resolution": "Inherited from parent demo zone",
+      "geographic_extent": {
+        "north": 12.837,
+        "south": 12.809,
+        "east": 80.0525,
+        "west": 80.031
+      },
+      "is_real": false,
+      "status": "DEMO",
+      "description": "No real land-cover raster is integrated in Phase 2; the parent demo-zone factor is retained.",
+      "processing": null
+    }
+  }
+}

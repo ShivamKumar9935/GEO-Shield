@@ -1,0 +1,80 @@
+{
+  "scenarios": [
+    {
+      "id": "EVAC-01",
+      "name": "Potheri Lowlands (Zone C) to SRM Medical College Shelter (Zone B)",
+      "origin": { "name": "Zone C: Potheri Lowlands", "coords": [12.8280, 80.0380] },
+      "destination": { "name": "Zone B: SRM Medical Center Shelter", "coords": [12.8180, 80.0410] },
+      "shortest_route": {
+        "distance_km": 2.4,
+        "est_time_min": 8.5,
+        "risk_level": "CRITICAL",
+        "risk_score": 85,
+        "traversed_hazard_zones": ["ZONE-C", "Potheri Eri Inundation Area"],
+        "color": "#64748b",
+        "description": "Direct route cutting through low-elevation Potheri lake basin and waterlogged service road. Highly vulnerable to road submersion.",
+        "path": [
+          [12.8280, 80.0380],
+          [12.8270, 80.0375],
+          [12.8245, 80.0385],
+          [12.8215, 80.0395],
+          [12.8180, 80.0410]
+        ]
+      },
+      "risk_aware_route": {
+        "distance_km": 3.1,
+        "est_time_min": 11.2,
+        "risk_level": "LOW",
+        "risk_score": 24,
+        "traversed_hazard_zones": [],
+        "color": "#38bdf8",
+        "description": "Modeled example route follows the demonstration GST Road corridor and SRM Central Boulevard geometry.",
+        "path": [
+          [12.8280, 80.0380],
+          [12.8275, 80.0430],
+          [12.8260, 80.0475],
+          [12.8220, 80.0460],
+          [12.8200, 80.0435],
+          [12.8180, 80.0410]
+        ]
+      }
+    },
+    {
+      "id": "EVAC-02",
+      "name": "Hostel Blocks (Zone E) to Maraimalai Cyclone Shelter (Zone G)",
+      "origin": { "name": "Zone E: SRM Hostel Blocks", "coords": [12.8205, 80.0490] },
+      "destination": { "name": "Zone G: Maraimalai Cyclone Relief Centre", "coords": [12.8115, 80.0340] },
+      "shortest_route": {
+        "distance_km": 2.8,
+        "est_time_min": 9.0,
+        "risk_level": "HIGH",
+        "risk_score": 68,
+        "traversed_hazard_zones": ["ZONE-D Culvert"],
+        "color": "#64748b",
+        "description": "Stored demo fallback route line; this geometry and risk label do not document an observed flooded culvert.",
+        "path": [
+          [12.8205, 80.0490],
+          [12.8185, 80.0440],
+          [12.8150, 80.0390],
+          [12.8115, 80.0340]
+        ]
+      },
+      "risk_aware_route": {
+        "distance_km": 3.6,
+        "est_time_min": 13.0,
+        "risk_level": "LOW",
+        "risk_score": 19,
+        "traversed_hazard_zones": [],
+        "color": "#38bdf8",
+        "description": "Modeled example route follows the demonstration perimeter corridor around the railway underpass.",
+        "path": [
+          [12.8205, 80.0490],
+          [12.8235, 80.0450],
+          [12.8190, 80.0395],
+          [12.8140, 80.0360],
+          [12.8115, 80.0340]
+        ]
+      }
+    }
+  ]
+}
